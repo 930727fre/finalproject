@@ -1,0 +1,4 @@
+tqdm
+requests
+lxml
+bs4
