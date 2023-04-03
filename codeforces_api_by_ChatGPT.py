@@ -29,5 +29,5 @@ def cf_ChatGPT():
             })
 
     # Save the contests data in a JSON file
-    with open('codeforce.json', 'w') as f:
+    with open('./jsons/GPT_codeforce.json', 'w') as f:
         json.dump(contests, f)
