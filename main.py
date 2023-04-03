@@ -1,6 +1,8 @@
-import lxml
-import tqdm
-import requests
-import bs4
+import lxml, os, requests, bs4
+import codeforces, codeforces_api_by_ChatGPT
 
-print("hello from python main.py")
+print("main.py:")
+print("codeforces_api_by_ChatGPT.py:")
+codeforces_api_by_ChatGPT.cf_ChatGPT()
+print("codeforces.py:")
+codeforces.cf()
