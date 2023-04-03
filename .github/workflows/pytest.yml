@@ -32,6 +32,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           python3 main.py
+          echo "cat ./jsons/codeforces.json"
           cat ./jsons/codeforces.json
           echo Add other actions to build,
           echo test, and deploy your project.
