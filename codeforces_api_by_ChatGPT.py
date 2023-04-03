@@ -2,6 +2,7 @@ import requests
 import json
 from datetime import datetime, timedelta
 
+print("codeforces_api_by_ChatGPT.py:")
 # Set the API endpoint URL
 url = 'https://codeforces.com/api/contest.list'
 

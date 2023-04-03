@@ -3,6 +3,7 @@ import requests
 import bs4
 import time
 
+print("codeforces.py:")
 url="https://codeforces.com/api/contest.list"
 response=requests.get(url)
 requests_try=3
