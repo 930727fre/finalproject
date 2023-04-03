@@ -32,7 +32,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           python3 main.py
-          python3 test.py
+          python3 codeforces_api_by_ChatGPT.py 
           cat ./jsons/test_codeforce.json
           echo Add other actions to build,
           echo test, and deploy your project.
