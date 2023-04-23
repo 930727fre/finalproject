@@ -4,22 +4,26 @@ def cf():
     url="https://codeforces.com/api/contest.list"
     response=requests.get(url)
     requests_try=3
-    while requests_try and response.status_code!=200:
+    while requests_try and not response.ok:
         requests_try -= 1
         time.sleep(2)
-    if response.status_code!=200:
-        print("unable to GET from ", url)
-        print("status code :", response.status_code)
-        print("reaon :", response.reason)
-        quit()
+        response=requests.get(url)
+    if not response.ok:
+        print("unable to requests.get ",url)
+        exit(0)
+    else:
+        print("requests.get %s successfully!"%url)
     r=response.json() #shorten for response
     contests=[]
     for contest in r['result']:
-        if contest['relativeTimeSeconds']<0 and -5260000<contest['relativeTimeSeconds']: # date range: 2 months
+        if (contest['phase']=="CODING" or contest['phase']=="BEFORE") and -5260000<contest['relativeTimeSeconds']: # date range: 2 months
             contests.append({
                 "name": contest['name'],
-                "startTime": contest['startTimeSeconds']
+                "startTime": contest['startTimeSeconds'],
+                "comment": "NULL"
             })
     file=open("./jsons/codeforces.json",'w')
     json.dump(contests,file)
     file.close()
+
+cf()
