@@ -34,7 +34,7 @@ jobs:
           python3 main.py
           echo "cat ./jsons/codeforces.json"
           cat ./jsons/codeforces.json
-          echo "cat ./jsons/cses.json"
-          cat ./jsons/cses.json          
+          echo "cat ./jsons/zerojudge.json"
+          cat ./jsons/zerojudge.json          
           echo Add other actions to build,
           echo test, and deploy your project.

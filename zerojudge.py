@@ -1,6 +1,6 @@
 import lxml, requests, bs4, time, json, datetime
 
-def cses():
+def zerojudge():
     url="https://zerojudge.tw/Contests"
     response=requests.get(url)
     requestsTry=5
@@ -33,6 +33,6 @@ def cses():
             "startTime": startTime,
             "comment": comment
         })   
-    file=open("./jsons/cses.json",'w')
+    file=open("./jsons/zerojudge.json",'w')
     json.dump(contests,file)
     file.close()             
