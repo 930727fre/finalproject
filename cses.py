@@ -36,10 +36,3 @@ def cses():
     file=open("./jsons/cses.json",'w')
     json.dump(contests,file)
     file.close()             
-
-
-
-    
-
-
-cses()

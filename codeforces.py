@@ -25,5 +25,3 @@ def cf():
     file=open("./jsons/codeforces.json",'w')
     json.dump(contests,file)
     file.close()
-
-cf()
