@@ -1,0 +1,13 @@
+
+.container {
+    height: 700px;
+    width: 800px;
+    position:absolute;
+    left:25%;
+}
+
+@media (max-width:600px) {
+    .container {
+        width: 380px;
+    }
+}
