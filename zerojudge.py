@@ -10,7 +10,7 @@ def zerojudge():
         requestsTry-=1
     if(requestsTry==0):
         print("unable to requests.get ",url)
-        exit(0)
+        exit(1)
     else:
         print("requests.get {url} successfully!".format(url=url))
     html=lxml.etree.HTML(response.content)

@@ -10,7 +10,7 @@ def cf():
         response=requests.get(url)
     if not response.ok:
         print("unable to requests.get ",url)
-        exit(0)
+        exit(1)
     else:
         print("requests.get %s successfully!"%url)
     r=response.json() #shorten for response
