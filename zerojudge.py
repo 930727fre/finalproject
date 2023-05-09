@@ -26,11 +26,13 @@ def zerojudge():
         path="/html/body/div[3]/div/div[{step}]/div/div/div[2]/div/div[1]/text()[2]".format(step=step)
         startTime=html.xpath(path)[0].split('：')[1].split('.')[0]
         startTime = time.strptime(startTime, '%Y-%m-%d %H:%M:%S')
+        endTime = str(int(time.mktime(startTime))+7200)+'000'
         startTime = str(int(time.mktime(startTime)))+'000'
         
         contests.append({
-            "name": name,
-            "startTime": startTime,
+            "title": name,
+            "start": startTime,
+            "end": endTime,
             "comment": comment
         })   
     file=open("./jsons/zerojudge.json",'w')
