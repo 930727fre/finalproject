@@ -20,8 +20,8 @@ def cf():
             contests.append({
                 "title": contest['name'],
                 "start": str(contest['startTimeSeconds'])+'000',
-                "end": str(contest['startTimeSeconds']+7200)+'000',
-                "comment": "NULL"
+                "end": str(contest['startTimeSeconds']+7200)+'000'
+                # "comment": "NULL"
             })
     file=open("./jsons/codeforces.json",'w')
     json.dump(contests,file)
