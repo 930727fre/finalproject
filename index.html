@@ -3,42 +3,14 @@
   <head>
     <meta charset='utf-8' />
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/index.global.min.js'></script>
-    
+    <!-- 我加在這裡 -->
     <!-- 轉換成中文 -->
     <script src="locales-all.global.js"></script>
 
     <!-- 連結CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          locale: 'zh-tw',
-          navLinks: true,
-          headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'dayGridMonth,timeGridWeek'
-          },
-          
-          events: [
-            {
-                title: 'Codeforces Round (Div. 1)',
-                startTime: '1683547500'
-            },
-            {
-                title: 'test',
-                start: '2023-05-08',
-                end: '2023-05-08'
-            }
-        ]
-        });
-        calendar.render();
-      });
-
-    </script>
+    <script src = "./getCalandar.js"></script>
   </head>
 
   <body>
