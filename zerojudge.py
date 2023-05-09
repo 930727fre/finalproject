@@ -26,8 +26,8 @@ def zerojudge():
         path="/html/body/div[3]/div/div[{step}]/div/div/div[2]/div/div[1]/text()[2]".format(step=step)
         startTime=html.xpath(path)[0].split('：')[1].split('.')[0]
         startTime = time.strptime(startTime, '%Y-%m-%d %H:%M:%S')
-        endTime = str(int(time.mktime(startTime))+7200)+'000'
-        startTime = str(int(time.mktime(startTime)))+'000'
+        endTime = (int(time.mktime(startTime))+7200)*1000
+        startTime = (int(time.mktime(startTime)))*1000
         
         contests.append({
             "title": name,
