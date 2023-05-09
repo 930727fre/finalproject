@@ -18,8 +18,9 @@ def cf():
     for contest in r['result']:
         if (contest['phase']=="CODING" or contest['phase']=="BEFORE") and -5260000<contest['relativeTimeSeconds']: # date range: 2 months
             contests.append({
-                "name": contest['name'],
-                "startTime": str(contest['startTimeSeconds'])+'000',
+                "title": contest['name'],
+                "start": str(contest['startTimeSeconds'])+'000',
+                "end": str(contest['startTimeSeconds']+7200)+'000',
                 "comment": "NULL"
             })
     file=open("./jsons/codeforces.json",'w')
