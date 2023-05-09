@@ -8,7 +8,7 @@ async function getJSON(url)
         ourevents.push({title: json[i]['name'], startTime: json[i]['startTime']});
 }
 
-getJSON('./z.json');
+getJSON('./codeforces.json');
 
 
 document.addEventListener('DOMContentLoaded', function() {
