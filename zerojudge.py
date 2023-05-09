@@ -32,8 +32,8 @@ def zerojudge():
         contests.append({
             "title": name,
             "start": startTime,
-            "end": endTime,
-            "comment": comment
+            "end": endTime
+            # "comment": comment
         })   
     file=open("./jsons/zerojudge.json",'w')
     json.dump(contests,file)
