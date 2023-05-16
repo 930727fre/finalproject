@@ -1,0 +1,23 @@
+########左表格:
+    比賽名稱
+/html/body/div[1]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[1]/div/a/div[2]/div/div[1]/div/span
+    時間
+/html/body/div[1]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[1]/div/a/div[2]/div/div[2]
+    比對至最上面
+/html/body/div[1]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[1]
+
+########右表格:
+    比賽名稱
+/html/body/div[1]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[2]/div/a/div[2]/div/div[1]/div/span
+    時間
+/html/body/div[1]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[2]/div/a/div[2]/div/div[2]
+    比對至最上面
+/html/body/div[1]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[2]
+
+
+//*[@id="__next"]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[1]/div/a/div[2]/div/div[1]/div/span
+//*[@id="__next"]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[2]/div/a/div[2]/div/div[1]/div/span
+
+
+//*[@id="__next"]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[1]/div/a/div[2]/div/div[2]
+//*[@id="__next"]/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[2]/div/a/div[2]/div/div[2]
