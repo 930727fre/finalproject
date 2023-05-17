@@ -10,7 +10,7 @@ def cf():
         response=requests.get(url)
     if not response.ok:
         print("unable to requests.get ",url)
-        exit(1)
+        return 0
     else:
         print("requests.get %s successfully!"%url)
     r=response.json() #shorten for response
@@ -26,3 +26,4 @@ def cf():
     file=open("./jsons/codeforces.json",'w')
     json.dump(contests,file)
     file.close()
+    return 1

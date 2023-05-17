@@ -1,6 +1,6 @@
 import lxml, requests, bs4, time, json, datetime
 
-def zerojudge():
+def zj():
     url="https://zerojudge.tw/Contests"
     response=requests.get(url)
     requestsTry=5
@@ -10,7 +10,8 @@ def zerojudge():
         requestsTry-=1
     if(requestsTry==0):
         print("unable to requests.get ",url)
-        exit(1)
+        return 0
+    
     else:
         print("requests.get {url} successfully!".format(url=url))
     html=lxml.etree.HTML(response.content)
@@ -38,3 +39,4 @@ def zerojudge():
     file=open("./jsons/zerojudge.json",'w')
     json.dump(contests,file)
     file.close()             
+    return 1

@@ -1,10 +1,15 @@
 import lxml, os, requests, bs4
-import codeforces, codeforces_api_by_ChatGPT, zerojudge
+import codeforces, codeforces_api_by_ChatGPT, zerojudge, json
 
+statusJson=[]
 print("main.py:")
-#print("codeforces_api_by_ChatGPT.py:")
-#codeforces_api_by_ChatGPT.cf_ChatGPT()
 print("codeforces.py:")
-codeforces.cf()
+statusJson.append({"codeforces": codeforces.cf()}) 
 print("zerojudge.py")
-zerojudge.zerojudge()
+statusJson.append({"zerojudge": zerojudge.zj()}) 
+# print("leetcode.py")
+# statusJson.append({"leetcode": leetcode.lc()}) 
+
+file=open("./jsons/status.json",'w')
+json.dump(statusJson, file)
+file.close()
