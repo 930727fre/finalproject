@@ -1,5 +1,5 @@
 import lxml, os, requests, bs4
-import codeforces, codeforces_api_by_ChatGPT, zerojudge
+import codeforces, codeforces_api_by_ChatGPT, zerojudge, leetcode
 
 print("main.py:")
 #print("codeforces_api_by_ChatGPT.py:")
@@ -8,3 +8,5 @@ print("codeforces.py:")
 codeforces.cf()
 print("cses.py")
 zerojudge.zerojudge()
+print("leetcode.py")
+leetcode.leetcode_final()
