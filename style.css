@@ -7,11 +7,42 @@ html,body {
 .container {
     position: fixed;
     height: auto;
-    top: 1em;
+    top: 2.5em;
     left: 1em;
     right: 1em;
     bottom: 1em;
-} 
+}
+
+/* 官網超連結的排版 */
+.competitionURL {
+    display: flex;
+    justify-content: space-evenly;
+}
+.competitionURL a {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-radius:10px 10px 10px 10px;
+
+}
+.competitionURL a:hover {
+    background: #500056;
+    color: #ffffff;
+}
+.competitionURL a:visited {
+    border-radius:10px 10px 10px 10px;
+    background: #fddeff;
+    color: #000000;
+}
+
+/* 超出格子的title要自動換行 */
+.event-title {
+    word-wrap: break-word;
+}
+.event-title-overflow {
+    white-space: normal ;
+}
 /*讓toolbar往內收一點*/
 .fc-header-toolbar {
     padding-top: 1em;
@@ -34,3 +65,4 @@ html,body {
 .fc-daygrid-day-frame {
     background-color: rgba(255, 255, 255, 0);
 }
+
