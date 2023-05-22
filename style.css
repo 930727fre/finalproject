@@ -1,13 +1,68 @@
-
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+/* 設定中文字型 */
+html,body {
+    font-family: 'Noto Sans TC','Helvetica', sans-serif;
+}
+/* 設定月曆大小 */
 .container {
-    height: 700px;
-    width: 800px;
-    position:absolute;
-    left:25%;
+    position: fixed;
+    height: auto;
+    top: 2.5em;
+    left: 1em;
+    right: 1em;
+    bottom: 1em;
 }
 
-@media (max-width:600px) {
-    .container {
-        width: 380px;
-    }
+/* 官網超連結的排版 */
+.competitionURL {
+    display: flex;
+    justify-content: space-evenly;
 }
+.competitionURL a {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-radius:10px 10px 10px 10px;
+
+}
+.competitionURL a:hover {
+    background: #500056;
+    color: #ffffff;
+}
+.competitionURL a:visited {
+    border-radius:10px 10px 10px 10px;
+    background: #fddeff;
+    color: #000000;
+}
+
+/* 超出格子的title要自動換行 */
+.event-title {
+    word-wrap: break-word;
+}
+.event-title-overflow {
+    white-space: normal ;
+}
+/*讓toolbar往內收一點*/
+.fc-header-toolbar {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+/*title的字體大一點*/
+.fc-toolbar-title {
+    font-size: 3em;
+}
+/* 顯示今日的月曆格子顏色加深 */
+:root{
+    --fc-today-bg-color: rgba(255 227 97 / 40%);
+}
+/* 週日~週六變成淺藍色 */
+.fc-scrollgrid-sync-inner {
+    background-color: rgba(183, 186, 255, 0.25);
+}
+/* 讓日的格子維持透明白色 */
+.fc-daygrid-day-frame {
+    background-color: rgba(255, 255, 255, 0);
+}
+
