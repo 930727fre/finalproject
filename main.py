@@ -1,5 +1,5 @@
 import lxml, os, requests, bs4
-import codeforces, codeforces_api_by_ChatGPT, zerojudge, json
+import codeforces, codeforces_api_by_ChatGPT, zerojudge, json, leetcode
 
 statusJson=[]
 print("main.py:")
