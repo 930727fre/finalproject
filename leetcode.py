@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs
 from dateutil import parser, rrule
 from datetime import datetime, timedelta
 
-def LeetCode():
+def lc():
     url="https://leetcode.com/contest/"
     response=requests.get(url)
     requestsTry=5
@@ -48,4 +48,3 @@ def LeetCode():
     json.dump(contests, file)
     file.close()
     return 1
-LeetCode()
