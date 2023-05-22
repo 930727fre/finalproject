@@ -41,10 +41,11 @@ def lc():
         
         contests.append({
             "name":name,
-            "startTime":str(startTime),  # 轉換為字串
+            "start":str(startTime),  # 轉換為字串
+            "end": str(startTime+7200)
         })
 
-    file=open("./leetcode.json",'w')
+    file=open("./jsons/leetcode.json",'w')
     json.dump(contests, file)
     file.close()
     return 1
