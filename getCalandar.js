@@ -1,12 +1,20 @@
 let ourevents = []
 async function getJSON(url)
 {
-    const response = await fetch(url);
-    const json = await response.json();
-    console.log(json)
-    for(var i = 0; i < json.length; ++i)
-        ourevents.push({id: i,title: json[i]["title"], start: json[i]["start"], end: json[i]["end"]});
-    ourevents.push({title: "Codeforces Round (Div. 1)", start: "2023-05-09T03:15:10", end: "2023-05-09T03:15:10"});
+    const response = await fetch(url).then(res => {
+      if(!res.ok) {
+        return res.text().then(text => { throw new Error(text) })
+       }
+      else {
+       return res.json();
+     }    
+    })
+    .catch(err => {
+       alert("在讀取 json 時發生錯誤");
+    });
+    for(var i = 0; i < response.length; ++i){
+        ourevents.push({id: i,title: response[i]["title"], start: response[i]["start"], end: response[i]["end"]});
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     (data =>{
       getJSON('./ze.json').then
       (data =>{
+        getJSON('./le.json').then
+        (data =>{
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'dayGridMonth',
@@ -61,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log(ourevents);
         calendar.render();
+        })
       })
     })
     
