@@ -40,7 +40,7 @@ def lc():
         startTime = int(time.mktime(startTime.timetuple())) * 1000
         
         contests.append({
-            "name":name,
+            "title":name,
             "start":str(startTime),  # 轉換為字串
             "end": str(startTime+7200)
         })
