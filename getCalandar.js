@@ -18,11 +18,11 @@ async function getJSON(url)
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    getJSON('./z.json').then
+    getJSON('./jsons/codeforces.json').then
     (data =>{
-      getJSON('./ze.json').then
+      getJSON('./jsons/zerojudge.json').then
       (data =>{
-        getJSON('./le.json').then
+        getJSON('./jsons/leetcode.json').then
         (data =>{
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
