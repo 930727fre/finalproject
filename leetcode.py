@@ -40,9 +40,9 @@ def lc():
         startTime = int(time.mktime(startTime.timetuple())) * 1000
         
         contests.append({
-            "title":name,
-            "start":str(startTime),  # 轉換為字串
-            "end": str(startTime+7200)
+            "title": name,
+            "start": startTime,  # 轉換為字串
+            "end": startTime+7200
         })
 
     file=open("./jsons/leetcode.json",'w')
