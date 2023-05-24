@@ -2,38 +2,54 @@
 /* 設定中文字型 */
 html,body {
     font-family: 'Noto Sans TC','Helvetica', sans-serif;
+    margin: 0pt;
 }
 /* 設定月曆大小 */
 .container {
     position: fixed;
     height: auto;
-    top: 2.5em;
+    top: 5em;
     left: 1em;
     right: 1em;
     bottom: 1em;
 }
 
 /* 官網超連結的排版 */
-.competitionURL {
+.header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    background: #2c3e50;
+    height: 100%;
+    padding: 10px;
+    align-items: center;
 }
-.competitionURL a {
+.header a {
+    /* 增加超連結點擊面積 */
+    display: inline-block;
+    /* 去除超連結底線 */
+    text-decoration: none;
     padding-right: 30px;
     padding-left: 30px;
-    padding-top: 10px;
-    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-bottom: 6px;
     border-radius:10px 10px 10px 10px;
-
-}
-.competitionURL a:hover {
-    background: #500056;
     color: #ffffff;
 }
-.competitionURL a:visited {
-    border-radius:10px 10px 10px 10px;
-    background: #fddeff;
-    color: #000000;
+
+/* 超連結hover的效果 */
+.header a:hover {
+    background: #f5f5f5;
+    color: black;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+/*h1的樣式*/
+.header h1{
+    color: #ffffff;
+    margin: 0pt;
 }
 
 /* 超出格子的title要自動換行 */
