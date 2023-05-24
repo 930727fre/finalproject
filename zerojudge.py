@@ -1,6 +1,6 @@
 import lxml, requests, bs4, time, json, datetime
 
-def zerojudge():
+def zj():
     url="https://zerojudge.tw/Contests"
     response=requests.get(url)
     requestsTry=5
@@ -10,7 +10,8 @@ def zerojudge():
         requestsTry-=1
     if(requestsTry==0):
         print("unable to requests.get ",url)
-        exit(1)
+        return 0
+    
     else:
         print("requests.get {url} successfully!".format(url=url))
     html=lxml.etree.HTML(response.content)
@@ -26,8 +27,8 @@ def zerojudge():
         path="/html/body/div[3]/div/div[{step}]/div/div/div[2]/div/div[1]/text()[2]".format(step=step)
         startTime=html.xpath(path)[0].split('：')[1].split('.')[0]
         startTime = time.strptime(startTime, '%Y-%m-%d %H:%M:%S')
-        endTime = str(int(time.mktime(startTime))+7200)+'000'
-        startTime = str(int(time.mktime(startTime)))+'000'
+        endTime = (int(time.mktime(startTime))+7200)*1000
+        startTime = (int(time.mktime(startTime)))*1000
         
         contests.append({
             "title": name,
@@ -38,3 +39,4 @@ def zerojudge():
     file=open("./jsons/zerojudge.json",'w')
     json.dump(contests,file)
     file.close()             
+    return 1

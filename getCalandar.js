@@ -1,4 +1,7 @@
 let ourevents = []
+
+const path = "./jsons/";
+
 async function getJSON(url)
 {
     const response = await fetch(url).then(res => {
@@ -18,11 +21,11 @@ async function getJSON(url)
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    getJSON('./jsons/codeforces.json').then
+    getJSON(path + 'codeforces.json').then
     (data =>{
-      getJSON('./jsons/zerojudge.json').then
+      getJSON(path + 'zerojudge.json').then
       (data =>{
-        getJSON('./jsons/leetcode.json').then
+        getJSON(path + 'leetcode.json').then
         (data =>{
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {

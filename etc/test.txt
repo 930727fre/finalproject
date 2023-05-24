@@ -1,4 +1,3 @@
-/html/body/div[3]/div/div[19]/div/div/div[2]/div/div[1]/text()[2]
 /html/body/div[3]/div/div[20]/div/div/div[2]/div/div[1]/text()[2]
 //*[@id="contestInfo"]/text()[2]
 
