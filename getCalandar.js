@@ -84,10 +84,33 @@ function getCalendar()
 
    getCalendar(); 
 
-var button1 = document.getElementById("codeforces");  
-var button2 = document.getElementById("zerojudge");
-var button3 = document.getElementById("leetcode");
+let checkbox1 = document.getElementById("codeforces");  
+let checkbox2 = document.getElementById("zerojudge");
+let checkbox3 = document.getElementById("leetcode");
 
-button1.onclick = function(){ state[0] = !state[0], getCalendar()}
-button2.onclick = function(){ state[1] = !state[1], getCalendar()}
-button3.onclick = function(){ state[2] = !state[2], getCalendar()}
+checkbox1.addEventListener('change', box =>
+{
+    if(box.currentTarget.checked)
+        state[0] = true;
+    else
+        state[0] = false;
+    getCalendar();
+})
+
+checkbox2.addEventListener('change', box =>
+{
+    if(box.currentTarget.checked)
+        state[1] = true;
+    else
+        state[1] = false;
+    getCalendar();
+})
+
+checkbox3.addEventListener('change', box =>
+{
+    if(box.currentTarget.checked)
+        state[2] = true;
+    else
+        state[2] = false;
+    getCalendar();
+})
