@@ -29,5 +29,3 @@ jobs:
           git add .
           git commit -m "Auto-commit by GitHub Actions"
           git push
-
-
