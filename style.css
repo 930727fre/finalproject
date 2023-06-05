@@ -8,7 +8,7 @@ html,body {
 .container {
     position: fixed;
     height: auto;
-    top: 5em;
+    top: 7em;
     left: 1em;
     right: 1em;
     bottom: 1em;
@@ -36,6 +36,10 @@ html,body {
     padding-bottom: 6px;
     border-radius:10px 10px 10px 10px;
     color: #ffffff;
+}
+.checkID {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .header img {
